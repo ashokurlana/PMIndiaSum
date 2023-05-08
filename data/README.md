@@ -7,9 +7,8 @@ https://drive.google.com/file/d/1KkJ4UbDprtoeeCA6wxfMknWXykYgnLUY/view?usp=shari
 
 ## Prepare data to run IndicBART
 
-The script creates the train.csv, valid.csv and test.csv files with columns text, summary, src_lang, trg_lang
+For a given language pair, `prepare_data.py` creates `train.csv`, `valid.csv` and `test.csv` files, with four columns: `text`, `summary`, `src_lang`, `trg_lang`
 
 ```
-python3 prepare_data.py --model_type $MODEL_NAME --data_file $DATA_PATH --lang_pair $LANG --output_dir ./
+python3 prepare_data.py --model_type ${MODEL_TYPE} --data_file ${DATA_PATH} --lang_pair ${LANG_PAIR} --output_dir ${OUTPUT_DIR}
 ```
-
