@@ -1,14 +1,26 @@
 ## Data Preparation
 
-## PMIndiaSum dataset with split information
-
+## PMIndiaSum dataset
 https://drive.google.com/file/d/1KkJ4UbDprtoeeCA6wxfMknWXykYgnLUY/view?usp=sharing
 
+The data comes in .jsonl format where each json object corresponds to document-summary pairs for all available languages extracted from an article.
 
-## Prepare data to run IndicBART
+The corpus is released under the CC-BY-4.0, in other words the corpus can be freely shared and adapted as long as appropriate
+credit is give. https://creativecommons.org/licenses/by/4.0/
+
+## Prepare for MBART or IndicBART
 
 For a given language pair, `prepare_data.py` creates `train.csv`, `valid.csv` and `test.csv` files, with four columns: `text`, `summary`, `src_lang`, `trg_lang`
 
 ```
-python3 prepare_data.py --model_type ${MODEL_TYPE} --data_file ${DATA_PATH} --lang_pair ${LANG_PAIR} --output_dir ${OUTPUT_DIR}
+# MODEL_TYPE can be "mbart" or "indicbart".
+# DATA_FILE is the path to the data file.
+# LANG_PAIR is the language pair of interest, e.g. "en-en", "as-bn", or "all" to train a single multilingual model.
+# OUTPUT_DIR is the directory where the files will be written to.
+
+python3 prepare_data.py \
+  --model_type ${MODEL_TYPE} \
+  --data_file ${DATA_FILE} \
+  --lang_pair ${LANG_PAIR} \
+  --output_dir ${OUTPUT_DIR}
 ```
