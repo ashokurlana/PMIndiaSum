@@ -1,6 +1,5 @@
-## Data Preparation
-
-## PMIndiaSum dataset
+## Data
+### PMIndiaSum data download
 https://drive.google.com/file/d/1KkJ4UbDprtoeeCA6wxfMknWXykYgnLUY/view?usp=sharing
 
 The data comes in .jsonl format where each json object corresponds to document-summary pairs for all available languages extracted from an article.
@@ -8,7 +7,7 @@ The data comes in .jsonl format where each json object corresponds to document-s
 The corpus is released under the CC-BY-4.0, in other words the corpus can be freely shared and adapted as long as appropriate
 credit is give. https://creativecommons.org/licenses/by/4.0/
 
-## Prepare for MBART or IndicBART
+### Prepare data for MBART or IndicBART training
 
 For a given language pair, `prepare_data.py` creates `train.csv`, `valid.csv` and `test.csv` files, with four columns: `text`, `summary`, `src_lang`, `trg_lang`
 
