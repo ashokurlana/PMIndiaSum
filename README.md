@@ -1,7 +1,12 @@
 ## PMIndiaSum
-This repository includes the PMIndiaSum corpus and scripts for baselines models
+This repository includes the PMIndiaSum dataset under `data/` and scripts for baselines models under `baselines/`.
 
 
 ### License
 
-Contents of this repository are restricted to only non-commercial research purposes under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).] (https://creativecommons.org/licenses/by-nc-sa/4.0/) Copyright of the dataset contents belongs to the original copyright holders.
+The corpus is released under the CC-BY-4.0, in other words the corpus can be freely shared and adapted as long as appropriate
+credit is give. https://creativecommons.org/licenses/by/4.0/
+
+### Reference
+
+If you use the code or corpus, please kindly cite:
