@@ -1,16 +1,16 @@
 ## Train
 
-For a given language pair, `train_indicbart.sh` and `train_mbart.sh` are useful to perform mono-, cross-, and multi-lingual finetuning with IndicBART and mBART respectively. The finetuned model will be saved in the specified output directory. You can get the `train.csv` and `valid.csv` using the [prepare_data.py](https://github.com/ashokurlana/PMIndiaSum/blob/main/data/prepare_data.py) script. To perform multilingual fine-tuning, you can combine all the available language pairs data and perform the finetuning. 
+For a given language pair (e.g hi-hi, en-te), `train_indicbart.sh` and `train_mbart.sh` are useful to perform mono-, cross-lingual finetuning with IndicBART and mBART respectively. The finetuned model will be saved in the specified output directory. You can get the `train.csv` and `valid.csv` using the [prepare_data.py](https://github.com/ashokurlana/PMIndiaSum/blob/main/data/prepare_data.py) script. To perform multilingual fine-tuning, you can combine all the available language pairs data and perform the finetuning. 
 
 #### IndicBART
 ```
-sh train_indicbart.sh
+sh train_indicbart.sh lang_pair
 ```
 
 #### mBART
 
 ```
-sh train_mbart.sh
+sh train_mbart.sh lang_pair
 ```
 
 
