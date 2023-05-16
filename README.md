@@ -14,8 +14,9 @@ If you use our code or corpus, please kindly cite:
 ```
 @article{urlana2023pmindiasum,
     title={PMIndiaSum: Multilingual and Cross-lingual Headline Summarization for Languages in India}, 
-    author={Urlana, Ashok and Chen, Pinzhen and Zhao, Zheng and Cohen, Shay and Shrivastava, Manish and Haddow, Barry},
+    author={Urlana, Ashok and Chen, Pinzhen and Zhao, Zheng and Cohen, Shay B. and Shrivastava, Manish and Haddow, Barry},
     journal={arXiv preprint arXiv:2305.08828},
+    url ={https://arxiv.org/abs/2305.08828},
     year={2023}
 }
 ```
