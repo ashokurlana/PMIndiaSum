@@ -14,18 +14,22 @@ args = parser.parse_args()
 #mBART supported languages
 langs_mbart={"bn", "gu", "hi", "ml", "mni", "mr", "ta", "te", "ur", "en"}
 
-# IndicBART supported languages
+#IndicBART supported languages
 langs_indicbart={"as", "bn", "gu", "hi", "kn", "ml", "mni", "mr", "or", "pa", "ta", "te", "en"}
 
-# To prepare a single csv file of all langs combinations use the code as it is, otherwise to get a single lang csv file >
+# To prepare a single csv file of all langs combinations use the code as it is, otherwise to get a single lang csv file specify the lang_pair
 if args.lang_pair == "all":
     lang_combos = [str(x)+"-"+str(y) for x in "langs_"+args.model_type for y in "langs_"+args.model_type]
 else:
     lang_combos = [args.lang_pair]
 
+# Mapping of language codes to their corresponding mBART language tags
 lang_map_mbart={"bn":"bn_IN", "gu":"gu_IN", "hi":"hi_IN", "ml":"ml_IN", "mni":"mni_IN", "mr":"mr_IN", "ta":"ta_IN", "te":"te_IN","ur":"ur_PK","en":"en_XX"}
 
+# Create a dictionary to store the extracted data
 extracted_data = {"train": [], "valid": [], "test": []}
+
+# Iterate through the selected language combinations
 for lang_pair in lang_combos:
 	print("Processing lang-pair: "+str(lang_pair))
 	doc_lang, sum_lang = [lang.strip() for lang in lang_pair.split("-")]
@@ -39,7 +43,8 @@ for lang_pair in lang_combos:
 	        		extracted_data[item["split"]].append((item[doc_key].strip(), item[sum_key].strip(), lang_map_mbart[doc_lang], lang_map_mbart[sum_lang]))
 	        	else:
 	        		extracted_data[item["split"]].append((item[doc_key].strip(), item[sum_key].strip(), "<2"+doc_lang+">", "<2"+sum_lang+">"))
-	            	
+
+# Iterate through the extracted data dictionary	            	
 for split, ls in extracted_data.items():
     fields = ['text', 'summary', 'src_lang', 'trg_lang']
     with open(args.output_dir + "/" + split + ".csv", "w", encoding="utf-8") as file:
