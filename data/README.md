@@ -3,7 +3,7 @@
 ### Download
 https://drive.google.com/file/d/1KkJ4UbDprtoeeCA6wxfMknWXykYgnLUY/view?usp=sharing
 
-The corpus is released under the CC-BY-4.0, in other words the corpus can be freely shared and adapted as long as appropriate credit is given. https://creativecommons.org/licenses/by/4.0/
+The corpus is released under the CC-BY-4.0, in other words the corpus can be freely shared and adapted as long as appropriate credit is given. https://creativecommons.org/licenses/by/4.0/. The data is originally derived from the PM India website which has their license at https://www.pmindia.gov.in/en/website-policies/.
 
 ### Overview
 The data comes in `.jsonl` format, where each JSON object correspond to all the data extracted from a single article. Each JSON object has the following fields:
