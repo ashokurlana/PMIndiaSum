@@ -10,7 +10,9 @@ Our dataset is also available in HuggingFace Datasets. To load it, use the follo
 from datasets import load_dataset
 
 dataset = load_dataset("PMIndiaData/PMIndiaSum", "assamese-assamese")
-# you can use any of the following config names as a second argument: ${lang}-${lang}
+# you can use any of the following config names as a second argument:
+# ${lang}-${lang}, where ${lang} can be any of the following languages:
+# "assamese", "bengali", "english", "gujarati", "hindi", "kannada", "malayalm", "manipuri", "marathi", "punjabi", "odia", "telugu", "tamil", "urdu"
 ```
 
 ### Overview
